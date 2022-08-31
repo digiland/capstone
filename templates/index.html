@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate app</title>
+</head>
+<body>
+    <h1>Welcome to the translator APP</h1>
+    <p>Enter text to translate</p>
+    <form action="/translate" enctype="multipart/form-data" method="POST"> 
+        <textarea name="translate" id="translate" cols="30" rows="10"></textarea>
+        <input name ="target_language" type="text" placeholder="eg 'en','de','fr','hi' ">
+        <input name="submit" type="submit" value="Translate">
+    </form>
+
+{% if translation %}
+     
+     <h3> Translated text </h3>
+     <p>{{translation}}</p>
+
+{% endif %}
+
+
+        
+</body>
+</html>
